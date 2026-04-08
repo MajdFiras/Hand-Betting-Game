@@ -1,5 +1,5 @@
 import {create} from "zustand";
-import type {Tile, TileType} from "@/types/game";
+import type {Tile} from "@/types/game";
 
 interface TileStore {
     tiles : Record<string, Tile>

@@ -87,6 +87,9 @@ export const useRoundStore = create<RoundStore>((set,get)=>({
     return result
   },
   resetRound : ()=> {
+    const { hand1Ids, hand2Ids } = get()
+    const played = [...hand1Ids, ...hand2Ids]
+    if (played.length > 0) useDeckStore.getState().discardTiles(played)
     set({
         hand1Ids: [],
         hand2Ids: [],
