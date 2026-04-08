@@ -28,7 +28,7 @@ function buildDeck() : Record<string,Tile> {
         in this loop we have 4 tiles so tiles = 4
     */
     const dragonLabels = ['a','b','c','d'];
-    for(const label in dragonLabels) {
+    for(const label of dragonLabels) {
         const id = `dragon-${label}`
         tiles[id] = {id,type:'dragon',currentValue:5}
     }
@@ -38,7 +38,7 @@ function buildDeck() : Record<string,Tile> {
         in this loop we have 4 tiles so tiles = 4
     */
     const windLabels = ['a','b','c','d'];
-    for(const label in windLabels) {
+    for(const label of windLabels) {
         const id = `wind-${label}`
         tiles[id] = {id,type:'wind',currentValue:5}
     }
