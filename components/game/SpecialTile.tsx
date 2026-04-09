@@ -28,20 +28,17 @@ export default function SpecialTile({ type }: SpecialTileProps) {
     <div
       className="relative flex flex-col items-center justify-center gap-1 rounded-xl select-none"
       style={{
-        width: '4rem',
-        height: '6rem',
+        width: 'var(--tile-w)',
+        height: 'var(--tile-h)',
         background: config.bg,
         border: `1.5px solid ${config.borderColor}`,
         boxShadow: `inset 0 1px 0 rgba(255,255,255,0.06), 0 6px 18px rgba(0,0,0,0.65), 0 0 12px ${config.glowColor}`,
       }}
     >
-      {/* emoji */}
-      <span style={{ fontSize: '1.8rem', lineHeight: 1 }}>{config.emoji}</span>
-
-      {/* label */}
+      <span style={{ fontSize: 'var(--tile-emoji-fs)', lineHeight: 1 }}>{config.emoji}</span>
       <span
         className="font-semibold tracking-wide uppercase leading-none"
-        style={{ fontSize: '0.5rem', color: config.labelColor, letterSpacing: '0.08em' }}
+        style={{ fontSize: '0.45rem', color: config.labelColor, letterSpacing: '0.08em' }}
       >
         {config.label}
       </span>

@@ -3,6 +3,21 @@
 :root {
   --background: #07070f;
   --foreground: #f0f0f0;
+
+  /* tile dimensions — mobile first */
+  --tile-w: 3rem;
+  --tile-h: 4.5rem;
+  --tile-center-fs: 1.6rem;
+  --tile-emoji-fs: 1.4rem;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --tile-w: 4rem;
+    --tile-h: 6rem;
+    --tile-center-fs: 2.1rem;
+    --tile-emoji-fs: 1.8rem;
+  }
 }
 
 @theme inline {

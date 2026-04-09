@@ -1,7 +1,5 @@
+import GameScreen from '@/components/game/GameScreen'
+
 export default function NewGame() {
-  return (
-    <div>
-       new game logic goes here 
-    </div>
-  );
+  return <GameScreen />
 }

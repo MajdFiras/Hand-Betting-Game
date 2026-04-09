@@ -7,8 +7,8 @@ export default function NumberTile({ value }: NumberTileProps) {
     <div
       className="relative flex items-center justify-center rounded-xl select-none"
       style={{
-        width: '4rem',
-        height: '6rem',
+        width: 'var(--tile-w)',
+        height: 'var(--tile-h)',
         background: 'linear-gradient(160deg, #1e1c2e 0%, #131122 100%)',
         border: '1.5px solid rgba(255,255,255,0.13)',
         boxShadow:
@@ -18,7 +18,7 @@ export default function NumberTile({ value }: NumberTileProps) {
       {/* top-left corner pip */}
       <span
         className="absolute top-1.5 left-2 font-bold leading-none"
-        style={{ fontSize: '0.65rem', color: 'rgba(240,240,240,0.45)' }}
+        style={{ fontSize: '0.55rem', color: 'rgba(240,240,240,0.45)' }}
       >
         {value}
       </span>
@@ -26,7 +26,7 @@ export default function NumberTile({ value }: NumberTileProps) {
       {/* centre number */}
       <span
         className="font-bold leading-none"
-        style={{ fontSize: '2.1rem', color: '#f0f0f0' }}
+        style={{ fontSize: 'var(--tile-center-fs)', color: '#f0f0f0' }}
       >
         {value}
       </span>
@@ -34,7 +34,7 @@ export default function NumberTile({ value }: NumberTileProps) {
       {/* bottom-right corner pip (rotated) */}
       <span
         className="absolute bottom-1.5 right-2 font-bold leading-none rotate-180"
-        style={{ fontSize: '0.65rem', color: 'rgba(240,240,240,0.45)' }}
+        style={{ fontSize: '0.55rem', color: 'rgba(240,240,240,0.45)' }}
       >
         {value}
       </span>

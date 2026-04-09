@@ -24,8 +24,8 @@ export default function Home() {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center gap-12 w-full max-w-3xl">
         <HeroSection />
-        <GameFeatures />
         <ActionButtons />
+        <GameFeatures />
       </div>
 
     </main>
