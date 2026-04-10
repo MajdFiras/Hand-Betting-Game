@@ -8,6 +8,7 @@ import { useDeckStore } from '@/store/useDeckStore'
 import type { RoundResult } from '@/types/game'
 import HandDisplay from './HandDisplay'
 import GameOverScreen from './GameOverScreen'
+import RoundHistory from './RoundHistory'
 
 const RESULT_CONFIG: Record<RoundResult, { label: string; icon: string; color: string }> = {
   win:  { label: 'You Win!',  icon: '✓', color: '#4ade80' },
@@ -59,8 +60,7 @@ export default function GameScreen() {
         className="grid grid-cols-3 items-center px-4 sm:px-5 py-3 sm:py-4"
         style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}
       >
-        {/* Left: exit */}
-        <div>
+        <div className="flex items-center gap-2">
           <button
             onClick={() => router.push('/')}
             className="text-xs sm:text-sm font-semibold px-2.5 sm:px-3 py-1.5 rounded-lg transition-all
@@ -69,6 +69,7 @@ export default function GameScreen() {
           >
             ← Exit
           </button>
+          <RoundHistory />
         </div>
 
         {/* Center: round */}

@@ -18,3 +18,13 @@ export type LeaderboardEntry = {
     score: number
     date: string
 }
+
+export type TileSnapshot = { id: string; type: TileType; value: number }
+
+export type RoundHistoryEntry = {
+    hand1: TileSnapshot[]
+    hand2: TileSnapshot[]
+    hand1Total: number
+    hand2Total: number
+    result: RoundResult
+}
