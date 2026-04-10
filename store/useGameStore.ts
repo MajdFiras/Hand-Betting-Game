@@ -25,6 +25,7 @@
     startGame: () => {
       useTileStore.getState().initializeTiles()
       useRoundStore.getState().resetRound()
+      useRoundStore.setState({ history: [], pendingHistory: null })
       useDeckStore.getState().initializeDeck()
       useRoundStore.getState().dealHand1()
       set({ phase: 'betting', score: 0, roundNumber: 1 })
