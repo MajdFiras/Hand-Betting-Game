@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useRoundStore } from '@/store/useRoundStore'
-import MiniTile from './MiniTile'
+import MiniTile from './tiles/MiniTile'
 import type { RoundResult } from '@/types/game'
 
 const RESULT_COLOR: Record<RoundResult, string> = {

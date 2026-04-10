@@ -1,6 +1,6 @@
 'use client'
 
-import TileRenderer from './TileRenderer'
+import TileRenderer from './tiles/TileRenderer'
 
 interface HandDisplayProps {
   label: string
