@@ -57,10 +57,10 @@ import { useTileStore } from './useTileStore'
     },
 
     reshuffle: () => {
-      const { reshuffleCount } = get()
-      const freshDeck = Object.keys(useTileStore.getState().tiles)
+      const { reshuffleCount, drawPile, discardPile } = get()
+      const combined = [...drawPile, ...discardPile]
       set({
-        drawPile: shuffle(freshDeck),
+        drawPile: shuffle(combined),
         discardPile: [],
         reshuffleCount: reshuffleCount + 1,
       })
